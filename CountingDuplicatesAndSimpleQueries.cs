@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+/// <summary>
+/// This is the code for the exercises Simple Queries and CountDuplicates
+/// </summary>
+
 
 namespace CodingExercises
 {
@@ -23,7 +25,18 @@ namespace CodingExercises
             Console.ReadKey();
 
         }
-
+        /// <summary>
+        /// Consider an array of n integers, numbers. We define a non-unique value of numbers to be an integer that appears at least twice in the array. For example, if numbers = [1, 1, 2, 2, 2, 3, 4, 3, 9], then there are a total of 3 non-unique values in the array (i.e., 1, 2, and 3).
+        ///
+        ///Complete the countDuplicates function in the editor below. It has 1 parameter: an array of integers, numbers. It must return an integer denoting the number of non-unique values in the numbers array.
+        ///
+        ///Input Format Locked stub code in the editor reads the following input from stdin and passes it to the function: The first line contains an integer, n, denoting the size of the numbers array. Each line i of the n subsequent lines (where 0 ≤ i &lt; n) contains an integer describing the value of numbersi.
+        ///
+        ///Constraints 1 ≤ n ≤ 1000 1 ≤ numbersi ≤ 1000
+        ///
+        ///Output Format The function must return an integer denoting the number of non-unique values in numbers. This is printed to stdout by locked stub code in the editor.
+        /// </summary>
+        /// <param name="numbers">The sample that should be provided and analysed for duplicates</param>
         static void CountingDuplicates(List<int> numbers)
         {
             if (numbers.Count <= 1 || numbers.Count >= 1000)
@@ -65,7 +78,17 @@ namespace CodingExercises
             Console.WriteLine(" ");
 
         }
-
+        /// <summary>
+        /// Amy has an array, nums, of n positive integers and another array, maxes, of m positive integers. For each maxesi in maxes, she wants to know the total number of elements in nums which are less than or equal to that maxesi. For example, if nums = [1, 2, 3] and maxes = [2, 4], then there are 2 elements in nums that are ≤ maxes0 (which is 2) and 3 elements in nums that are ≤ maxes1 (which is 4). We can store these respective answers in another array, answer = [2, 3].
+        ///
+        ///Complete the counts function in the editor below. It has two parameters: An array, nums, of n positive integers. An array, maxes, of m positive integers. The function must return an array of m positive integers in which the integer at each index i (where 0 ≤ i &lt; m) denotes the total number of elements numsj (where 0 ≤ j &lt; n) satisfying numsj ≤ maxesi.
+        ///
+        ///Input Format Locked stub code in the editor reads the following input from stdin and passes it to the function: The first line contains an integer, n, denoting the number of elements in nums. Each line j of the n subsequent lines (where 0 ≤ j &lt; n) contains an integer describing numsj. The next line contains an integer, m, denoting the number of elements in maxes. Each line i of the m subsequent lines (where 0 ≤ i &lt; m) contains an integer describing maxesi.
+        ///
+        ///Constraints 2 ≤ n, m ≤ 105 1 ≤ numsj ≤ 109, where 0 ≤ j &lt; n. 1 ≤ maxesi ≤ 109, where 0 ≤ i &lt; m.
+        /// </summary>
+        /// <param name="numbers">The numbers that should be evaluated</param>
+        /// <param name="maxes">The maxes that will evaluate the numbers</param>
         static void CountTheMaxes(List<int> numbers, List<int> maxes)
         {
             numbers.Sort();
