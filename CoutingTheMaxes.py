@@ -29,13 +29,25 @@ def countingMaxes(numbers, maxes):
     pp(maxesCount)
 
 
+def countPairs(numbers, k):
+    numbers.sort()
+    numbers_secondary = set(numbers)
+    valid_pairs = set()
+    for number in numbers:
+        for numbs in numbers:
+            if (number <= numbs) and (number + numbs == k):
+                valid_pairs.add({number, numbs})
+
+    return len(valid_pairs)
+
+
 if __name__ == "__main__":
-    sample1Numbers = [1, 4, 2, 4]
+    sample1Numbers = [1, 2, 3, 4, 5, 6]
     sample1Maxes = [3, 5] * 100
 
     sample2Numbers = [2, 10, 5, 4, 8]
     sample2Maxes = [3, 1, 7, 8, 1, 20]
 
-    countingMaxes(sample1Numbers, sample1Maxes)
+    countPairs(sample1Numbers, sample1Maxes)
     countingMaxes(sample2Numbers, sample2Maxes)
 
